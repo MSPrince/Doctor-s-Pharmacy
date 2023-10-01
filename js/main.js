@@ -11,12 +11,12 @@ let bannerList = [
 ];
 
 let bannerContainer = document.querySelector(".banner");
-createOfferList(bannerList, bannerContainer)
+createOfferList(bannerList, bannerContainer);
 
 function createOfferList(list, container) {
-    list.foreach(function (el) {
+    list.forEach(function (el) { // Use 'forEach' instead of 'foreach'
         let img = document.createElement("img");
         img.setAttribute("src", el.imgUrl);
         container.append(img);
-    })
+    });
 }

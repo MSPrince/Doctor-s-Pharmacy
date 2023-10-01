@@ -268,7 +268,7 @@ nav ul li p {
 
 .banner img {
     width: 45%;
-    margin-right: 25px;
+    margin-right: 45px;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -278,12 +278,14 @@ nav ul li p {
 
 /* < !----------------------------------------------------------new offer list start----------------------------------------------------------> */
 .new-user-offer{
-    margin-bottom: 24px;
+    margin-bottom: 10px;
 }
 
 .cards-layout{
     display: flex;
     cursor: pointer;
+    margin-top: 10px;
+    /* border: 2px solid red; */
 }
 .cards-layout > div{
     width: 330px;
@@ -321,7 +323,39 @@ nav ul li p {
     box-shadow: var(--shadow);
 }
 /* < !----------------------------------------------------------new offer list end------------------------------------------------------------> */
+
+
 /* < !----------------------------------------------------------shop categories start----------------------------------------------------------> */
+.shop-categories{
+    margin-bottom: 40px;
+}
+.shop-categories>div{
+    display: flex;
+    text-align: center;
+    gap: 25px;
+}
+.shop-categories > div > div{
+    cursor: pointer;
+}
+.shop-categories img{
+    width:100%;
+    border-radius: 10px 0;
+    box-shadow: var(--shadow-border);
+}
+
+.shop-categories img:hover{
+    box-shadow: var(--shadow);
+}
+.shop-categories h4{
+    font-weight: 500;
+    font-size: 16px;
+    margin: 10px 0;
+}
+.shop-categories h1{
+    margin-top: -60px;
+    font-size: 26px;
+    font-weight: 600;
+}
 /* < !----------------------------------------------------------shop categories start----------------------------------------------------------> */
 /* < !----------------------------------------------------------shop categories start----------------------------------------------------------> */
 /* < !----------------------------------------------------------shop categories end----------------------------------------------------------> */

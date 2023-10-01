@@ -204,8 +204,51 @@ nav ul li p{
 
 
  /* < !----------------------------------------------------------nav card layout start--------------------------------------------------------> */
+ .nav-card-layout >div{
+    display: flex;
+    gap: 40px;
+    text-align: center;
+    overflow: auto;
+    padding: 2px;
+    /* justify-content: center; */
+ }
+
+.nav-card-layout  > div::-webkit-scrollbar{
+  display: none;
+}
+
+.nav-card-layout >div div {
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+.nav-card-layout >div div:hover {
+  box-shadow: lightgray 0 0 6px;
+}
+
+.nav-card-layout >div img{
+    width: 90px;
+}
  /* < !----------------------------------------------------------nav card layout end----------------------------------------------------------> */
+
+
  /* < !----------------------------------------------------------bannnerr start---------------------------------------------------------------> */
+ .banner::-webkit-scrollbar{
+    display: none;
+ }  
+ .banner{
+    display: flex;
+    overflow: auto;
+    width: 90%;
+    margin: auto;
+    box-sizing: border-box;
+   }
+
+   .banner img{
+    width: 45%;
+    margin-right: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+   }
  /* < !----------------------------------------------------------bannnerr end---------------------------------------------------------------------> */
  /* < !----------------------------------------------------------new offer list start----------------------------------------------------------> */
  /* < !----------------------------------------------------------new offer list end------------------------------------------------------------> */

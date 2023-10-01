@@ -125,3 +125,4 @@ login-sidebar
 
 https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png
 https://assets.pharmeasy.in/web-assets/dist/1fe1322a.svg
+

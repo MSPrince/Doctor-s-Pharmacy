@@ -22,24 +22,27 @@
     padding: 40px;
     margin: auto;
     box-sizing: border-box;
+    /* border: 2px solid red; */
+    /* margin-bottom: 30px; */
 }
 
-.container>.title {
+.container > .title {
     font-weight: 600;
     font-size: 26px;
     align-items: center;
     display: flex;
-
+    text-transform: capitalize;
+    margin-bottom: 20px;
 }
 
-.container>.subtitle {
+.container > .subtitle {
     font-size: 16px;
     font-weight: 400;
     margin: 8px 0 24px;
     align-items: center;
 }
 
-.container>.subtitle>img {
+.container>.subtitle > img {
     height: 18px;
 }
 
@@ -91,26 +94,26 @@
     color: rgb(167, 162, 167);
 }
 
-.product-cards>div>p>span {
-    color: rgb(194, 36, 36);
+.product-cards > div p > span {
+color: rgb(167, 162, 167);
     text-decoration: line-through;
 
 }
 
 .product-cards>div h4:last-child {
-    margin-left: 10px;
-    color: rgb(216, 12, 12);
-    font-size: 15px;
+    font-weight: 600;
 }
 
+.product-cards>div h4:last-child >span{
+    color:rgb(250 81 81);
+    margin-left: 10px;
+    font-size: 15px;
+}
 /* ------------------------------------------------global css End-------------------------------*/
 
 
 
-
-
-
-/* < !----------------------------navbar start--> */
+/* < !----------------------------navbar start---------------------------------------> */
 .navbar {
     position: fixed;
     width: 100%;
@@ -127,12 +130,12 @@
 
 }
 
-.nav>img {
+.nav > img {
     margin: 7px 35px;
     height: 40px;
 }
 
-.nav>img+div {
+.nav > img + div {
     width: 1px;
     background-color: grey;
     height: 30px;
@@ -144,7 +147,7 @@
 }
 
 
-#pick-adress>div {
+#pick-adress > div {
     display: flex;
 }
 
@@ -352,17 +355,19 @@ nav ul li p {
 
 /* < !----------------------------------------------------------new offer list start----------------------------------------------------------> */
 .new-user-offer {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    /* border: 2px solid red; */
 }
 
 .cards-layout {
     display: flex;
     cursor: pointer;
-    margin-top: 10px;
+    justify-content: center;  /*apne mn se add kiye hai */
+    /* margin-top: 10px; */
     /* border: 2px solid red; */
 }
 
-.cards-layout>div {
+.cards-layout > div {
     width: 330px;
     box-sizing: border-box;
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0px,
@@ -380,20 +385,20 @@ nav ul li p {
     border-radius: 5px;
 }
 
-.cards-layout>div>p {
+.cards-layout > div > p {
     margin: 0 10px;
     font-size: 14px;
     line-height: 25px;
 }
 
-.cards-layout>div:last-child {
+.cards-layout > div:last-child {
     background: linear-gradient(to right, rgb(235, 250, 250) rgb(176, 255, 255) rgb(176, 255, 255));
     display: block;
     text-align: center;
 }
 
-.cards-layout>div:last-child i,
-.cards-layout>div:last-child p {
+.cards-layout > div:last-child i,
+.cards-layout > div:last-child p {
     color: var(--main-color);
     font-size: 15px;
 }
@@ -436,12 +441,12 @@ nav ul li p {
     margin: 10px 0;
 }
 
-.shop-categories h1 {
+/* .shop-categories h1 {
     margin-top: -60px;
     margin-bottom: 15px;
     font-size: 26px;
     font-weight: 600;
-}
+} */
 
 /* < !----------------------------------------------------------shop categories end----------------------------------------------------------> */
 
@@ -527,6 +532,9 @@ nav ul li p {
 
 /* < !----------------------------------------------------------new launches end----------------------------------------------------------> */
 /* < !----------------------------------------------------------trending start----------------------------------------------------------> */
+     .trending .title{
+        margin-top: 70px;
+     }
 /* < !----------------------------------------------------------trending end----------------------------------------------------------> */
 /* < !----------------------------------------------------------lab test start----------------------------------------------------------> */
 /* < !----------------------------------------------------------lab test end----------------------------------------------------------> */

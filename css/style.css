@@ -19,11 +19,11 @@
 /* ------------------------------------------------global css Start-------------------------------*/
 .container {
     width: 100%;
-    padding: 40px;
+    padding: 20px 40px 20px 40px;
     margin: auto;
     box-sizing: border-box;
     /* border: 2px solid red; */
-    /* margin-bottom: 30px; */
+    margin-bottom: 30px;
 }
 
 .container > .title {
@@ -33,6 +33,7 @@
     display: flex;
     text-transform: capitalize;
     margin-bottom: 20px;
+    
 }
 
 .container > .subtitle {
@@ -54,8 +55,9 @@
 .product-cards {
     display: flex;
     gap: 25px;
-    /* overflow: auto; */
+    overflow: auto;
     padding: 2px;
+    height: 310px;
     /* border: 2px solid red; */
 }
 
@@ -364,7 +366,7 @@ nav ul li p {
     cursor: pointer;
     justify-content: center;  /*apne mn se add kiye hai */
     /* margin-top: 10px; */
-    /* border: 2px solid red; */
+    border: 2px solid red;
 }
 
 .cards-layout > div {
@@ -533,10 +535,26 @@ nav ul li p {
 /* < !----------------------------------------------------------new launches end----------------------------------------------------------> */
 /* < !----------------------------------------------------------trending start----------------------------------------------------------> */
      .trending .title{
-        margin-top: 70px;
+        /* margin-top: 70px; */
      }
 /* < !----------------------------------------------------------trending end----------------------------------------------------------> */
+
+
 /* < !----------------------------------------------------------lab test start----------------------------------------------------------> */
+  .lab-tests{
+    margin-top: 60px;
+    width: 100%;
+    padding: 40px 5%;
+    box-sizing: border-box;
+    background: linear-gradient((to bottom,rgb(232 246 255), white));}
+   
+    .lab-tests > div:nth-child(3){
+       display: flex;
+       justify-content: space-between;
+    }
+  .lab-tests>div:nth-child(3) > div > i{
+    
+  }
 /* < !----------------------------------------------------------lab test end----------------------------------------------------------> */
 /* < !----------------------------------------------------------become plus member start----------------------------------------------------------> */
 /* < !----------------------------------------------------------become plus member end----------------------------------------------------------> */

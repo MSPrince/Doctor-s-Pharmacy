@@ -98,7 +98,7 @@ function createProductList(list, container) {
         mrp.innerHTML = "MRP <span>₹" + el.mrp + "</span>";
         let p = (el.mrp * (100 - el.discount)) / 100; // Corrected calculation
         p = (Math.round(p * 100) / 100).toFixed(2);
-        price.innerHTML = "₹" + p + "<span>" + " ( " + el.discount +"% Off" +")";
+        price.innerHTML = "₹" + p + "<span>" + " ( " + el.discount +"%" +")";
         div2.append(name, mrp, price);
         div.append(img, div2);
         container.append(div);
@@ -159,3 +159,78 @@ let trendingProdList = [
 let trendingContainer = document.querySelector(".trending > .product-cards");
 createProductList(trendingProdList, trendingContainer);
 // --------------------------------------trending near you End---------------------------------------->>>
+
+
+
+
+// -----------------------------------------------freq booked lab test Start-------------------------------------------------------->>
+
+let freqBookedLabTestList = [
+    {
+        discount: 60,
+        name: "Post Pradndial Blood Sugar (PPBS)",
+        description: "Measure your blood sugar levels after last meal",
+        mrp: 500,
+        price: 199,
+        imgUrl: "https://s3.ap-south-1.amazonaws.com/pe-neon-public/diagnostics/production/recommendationWidget/b4682c3fb22d39479c6d7a4a481e5ae5.png?dim=96x0",
+    },
+    {
+        discount: 64,
+        name: "Comprehensive Full Body Checkup with Vitamin D & B12",
+        description:
+            "Measure Vitamin D & B12 levels and other essential parameters",
+        mrp: 4199,
+        price: 1499,
+        imgUrl: "https://s3.ap-south-1.amazonaws.com/pe-neon-public/diagnostics/production/recommendationWidget/9fc5a0ab225a3ca2bc1702149e07f311.png?dim=96x0",
+    },
+    {
+        discount: 71,
+        name: "Random Blood Sugar (RBS)",
+        description: "Testing of the blood sugar level at any time of the day",
+        mrp: 350,
+        price: 99,
+        imgUrl: "https://s3.ap-south-1.amazonaws.com/pe-neon-public/diagnostics/production/recommendationWidget/1d842b1450b53455922a5b6de3a3a980.png?dim=96x0",
+    },
+    {
+        discount: "PSP-D",
+        name: "",
+        description:
+            "To assess the renal function for early detection of any kidney disease",
+        mrp: "",
+        price: 99,
+        imgUrl: "https://s3.ap-south-1.amazonaws.com/pe-neon-public/diagnostics/production/recommendationWidget/d0c1ca33ee2637239dfed1645ed02aa8.png?dim=96x0",
+    },
+];
+
+let freqBookedLabTestContainer = document.querySelector(".freq-booked-lab-tests .product-banner");
+createProductBannerList(freqBookedLabTestList, freqBookedLabTestContainer);
+
+function createProductBannerList(list, container) {
+    list.forEach(function (el) {
+        let div = document.createElement("div");
+        let div2 = document.createElement("div");
+        let img = document.createElement("img");
+        let name = document.createElement("h4");
+        let discount = document.createElement("h4");
+        let description = document.createElement("p");
+        let price = document.createElement("h4");
+
+        if (typeof el.discount === "number") { // Fixed the if condition
+            discount.innerText = el.discount + "% OFF";
+            price.innerHTML = "<span>₹" + el.mrp + "</span><br>₹" + el.price; // Fixed this line
+        } else {
+            discount.innerText = el.discount;
+            discount.setAttribute("class", "no-discount"); // Fixed the class attribute
+            price.innerHTML = "₹" + el.price;
+        }
+
+        name.innerText = el.name;
+        description.innerText = el.description;
+        img.setAttribute("src", el.imgUrl);
+        div2.append(price, img); // Fixed the method name
+        div.append(discount, name, description, div2); // Fixed the method name
+        container.append(div);
+  
+    });
+}
+// -----------------------------------------------freq booked lab test End----------------------------------------------------------->>

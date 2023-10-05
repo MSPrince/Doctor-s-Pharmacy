@@ -166,6 +166,8 @@ let paymentOfferList = [
     },
 ];
 
+
+
 let wellnessEssentialsList = [
     {
         name: "Evion 400mg Strip of 10 Capsules",
@@ -205,6 +207,8 @@ let wellnessEssentialsList = [
         discount: 5,
     },
 ];
+
+
 
 let featuredBrandList = [
     {

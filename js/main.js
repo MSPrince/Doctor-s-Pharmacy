@@ -98,7 +98,7 @@ function createProductList(list, container) {
         mrp.innerHTML = "MRP <span>₹" + el.mrp + "</span>";
         let p = (el.mrp * (100 - el.discount)) / 100; // Corrected calculation
         p = (Math.round(p * 100) / 100).toFixed(2);
-        price.innerHTML = "₹" + p + "<span>" + " ( " + el.discount +"%" +")";
+        price.innerHTML = "₹" + p + "<span>" + " ( " + el.discount + "%" + ")";
         div2.append(name, mrp, price);
         div.append(img, div2);
         container.append(div);
@@ -230,7 +230,7 @@ function createProductBannerList(list, container) {
         div2.append(price, img); // Fixed the method name
         div.append(discount, name, description, div2); // Fixed the method name
         container.append(div);
-  
+
     });
 }
 // -----------------------------------------------freq booked lab test End----------------------------------------------------------->>
@@ -325,3 +325,274 @@ let wellnessEssentialsList = [
 let wellnessEssentialsContainer = document.querySelector(".wellness-essentials > .product-cards2");
 createProductList(wellnessEssentialsList, wellnessEssentialsContainer);
 /* < !------------------------------------------------------------welnes essential end----------------------------------------------------------> */
+
+
+
+
+
+/* < !-----------------------------------------------------------featured brand start----------------------------------------------------------> */
+let featuredBrandList = [
+    {
+        name: "Glucon-D",
+        imgUrl: "https://cms-contents.pharmeasy.in/carousel_item/e642f1b8237-Glucon_D.jpg?dim=1440x0",
+    },
+    {
+        name: "Himalaya",
+        imgUrl: "https://cms-contents.pharmeasy.in/carousel_item/3eb4eb6bfbe-App_Himalaya.jpg?dim=1440x0",
+    },
+    {
+        name: "Sugar Free",
+        imgUrl: "https://cms-contents.pharmeasy.in/carousel_item/1466c422fcd-Sugerfree.png?dim=1440x0",
+    },
+    {
+        name: "LivEasy",
+        imgUrl: "https://cms-contents.pharmeasy.in/carousel_item/1151b7d7c0e-LivEasy-min.png?dim=1440x0",
+    },
+    {
+        name: "Huggies",
+        imgUrl: "https://cms-contents.pharmeasy.in/carousel_item/201210bc27d-App_Huggies.jpg?dim=1440x0",
+    },
+    {
+        name: "Wellbeieng Nutrition",
+        imgUrl: "https://cms-contents.pharmeasy.in/carousel_item/d6726e69b22-04.jpg?dim=1440x0",
+    },
+    {
+        name: "Revital",
+        imgUrl: "https://cms-contents.pharmeasy.in/carousel_item/c9fc0cd6ef6-Revital-min.png?dim=1440x0",
+    },
+    {
+        name: "Volini",
+        imgUrl: "https://cms-contents.pharmeasy.in/carousel_item/e8a5cabe9f3-Volini-min.png?dim=1024x0",
+    },
+    {
+        name: "Pentasure",
+        imgUrl: "https://cms-contents.pharmeasy.in/carousel_item/c774461a093-Pentasure_App.jpg?dim=1024x0",
+    },
+    {
+        name: "Sirona",
+        imgUrl: "https://cms-contents.pharmeasy.in/carousel_item/587eeb1dcb8-App_Sirona.jpg?dim=1024x0",
+    },
+    {
+        name: "Abzorb",
+        imgUrl: "https://cms-contents.pharmeasy.in/carousel_item/2318a0e5326-App_Abzorb.jpg?dim=1024x0",
+    },
+    {
+        name: "EverHerb",
+        imgUrl: "https://cms-contents.pharmeasy.in/carousel_item/2f3e832e341-Everherb-min.png?dim=1024x0",
+    },
+    {
+        name: "Pharmeasy",
+        imgUrl: "https://cms-contents.pharmeasy.in/carousel_item/40facc7fa28-Pharmeasy-App.jpg?dim=1024x0",
+    },
+];
+
+let featuredBrandContainer = document.querySelector(".featured-brands > .brand-promo");
+// Call the createFeatureBrandList function with the correct variable names
+createFeatureBrandList(featuredBrandList, featuredBrandContainer);
+
+// Define the createFeatureBrandList function to create and append brand elements
+function createFeatureBrandList(list, container) {
+    list.forEach(function (el) {
+        let div = document.createElement("div");
+        let img = document.createElement("img");
+        let h4 = document.createElement("h4");
+        img.setAttribute("src", el.imgUrl);
+        h4.innerText = el.name; // Fix this line
+        div.append(img, h4); // Fix this line
+        container.append(div);
+    });
+}
+
+/* < !-----------------------------------------------------------featured brand end----------------------------------------------------------> */
+
+
+
+/* < !-----------------------------------------------------------deals of the day start----------------------------------------------------------> */
+let dealsOfTheDayList = [
+    {
+        name: "Sirona Feminine Cramp Relief Patch Packet Of 5 'S",
+        imgUrl: "https://cdn01.pharmeasy.in/dam/products_otc/I48459/sirona-feminine-cramp-relief-patch-packet-of-5-s-2-1641788205.jpg?dim=320x320&dpr=1&q=100",
+        mrp: 240,
+        discount: 10,
+    },
+    {
+        name: "Liveasy Wellness Apple Cider Vinegar With Mother -Improves Metabolism- 500ml Bottle",
+        imgUrl: "https://cdn01.pharmeasy.in/dam/products_otc/J51815/liveasy-wellness-apple-cider-vinegar-with-mother-improves-metabolism-500ml-bottle-2-1654165611.jpg?dim=320x320&dpr=1&q=100",
+        mrp: 640,
+        discount: 65,
+    },
+    {
+        name: "Revital H Women Multivitamin With Calcium, Zinc, Ginseng For Immunity, Strong Bones & Energy 30 Tablets",
+        imgUrl: "https://cdn01.pharmeasy.in/dam/products_otc/I00596/revital-h-women-multivitamin-with-calcium-zinc-ginseng-for-immunity-strong-bones-energy-30-tablets-1-1654168794.jpg?dim=320x320&dpr=1&q=100",
+        mrp: 345,
+        discount: 15,
+    },
+    {
+        name: "Volini Pain Relief Gel Tube Of 75 G",
+        imgUrl: "https://cdn01.pharmeasy.in/dam/products_otc/183157/volini-pain-relief-gel-tube-of-75-g-1-1654078754.jpg?dim=320x320&dpr=1&q=100",
+        mrp: 245,
+        discount: 15,
+    },
+    {
+        name: "Evion 400mg Strip of 10 Capsules",
+        imgUrl: "https://cdn01.pharmeasy.in/dam/products_otc/071710/evion-400mg-strip-of-10-capsules-2-1656662057.jpg?dim=1024x0",
+        mrp: 35,
+        discount: 10,
+    },
+    {
+        name: "Livogen Z Captab 15'S",
+        imgUrl: "https://cdn01.pharmeasy.in/dam/products_otc/I32380/livogen-z-captab-15s-2-1656662098.jpg?dim=320x320&dpr=1&q=100",
+        mrp: 70.4,
+        discount: 10,
+    },
+    {
+        name: "Volini Pain Relief Gel Tube Of 75 G",
+        imgUrl: "https://cdn01.pharmeasy.in/dam/products_otc/183157/volini-pain-relief-gel-tube-of-75-g-1-1654078754.jpg?dim=320x320&dpr=1&q=100",
+        mrp: 245,
+        discount: 15,
+    },
+];
+
+let dealsOfTheContainer = document.querySelector(".deals-of-the-day > .product-cards");
+createProductList(dealsOfTheDayList, dealsOfTheContainer);
+/* < !-----------------------------------------------------------deals of the day end----------------------------------------------------------> */
+
+
+
+/* < !----------------------------------------------------------spotlight start----------------------------------------------------------> */
+
+let spotlightList = [
+    {
+        name: "Evion 400mg Strip of 10 Capsules",
+        imgUrl: "https://cdn01.pharmeasy.in/dam/products_otc/071710/evion-400mg-strip-of-10-capsules-2-1656662057.jpg?dim=1024x0",
+        mrp: 35,
+        discount: 10,
+    },
+    {
+        name: "Evion 400mg Strip of 10 Capsules",
+        imgUrl: "https://cdn01.pharmeasy.in/dam/products_otc/071710/evion-400mg-strip-of-10-capsules-2-1656662057.jpg?dim=1024x0",
+        mrp: 35,
+        discount: 10,
+    },
+
+    {
+        name: "Neurobin Forte Tablet 30's",
+        imgUrl: "https://cdn01.pharmeasy.in/dam/products_otc/I09432/neurobion-forte-tablet-30s-2-1656661904.jpg?dim=1024x0",
+        mrp: 34.7,
+        discount: 10,
+    },
+    {
+        name: "Gas O Fast Active Jeera Axtacid Sachet Of 5 G",
+        imgUrl: "https://cdn01.pharmeasy.in/dam/products_otc/I34550/gas-o-fast-active-jeera-antacid-sachet-of-5-g-2-1654166983.jpg?dim=1024x0",
+        mrp: 10,
+        discount: 15,
+    },
+    {
+        name: "Pharmeasy Multivitamin Multimineral - Immunity Booster - Complete Nutrition - Bottle Of 60",
+        imgUrl: "https://cdn01.pharmeasy.in/dam/products_otc/T60720/pharmeasy-multivitamin-multimineral-immunity-booster-complete-nutrition-bottle-of-60-2-1658316798.jpg?dim=320x320&dpr=1&q=100",
+        mrp: 54,
+        discount: 15,
+    },
+    {
+        name: "Electral Powder 21.80gm",
+        imgUrl: "https://cdn01.pharmeasy.in/dam/products_otc/065285/electral-powder-2180gm-2-1653986181.jpg?dim=1024x0",
+        mrp: 21.05,
+        discount: 15,
+    },
+    {
+        name: "Supradyn Daily Multivitamin Tablets 15s",
+        imgUrl: "https://cdn01.pharmeasy.in/dam/products_otc/T70695/supradyn-daily-multivitamin-tablets-15s-1-1641793954.jpg?dim=1024x0",
+        mrp: 54,
+        discount: 5,
+    },
+];
+
+let spotlightContainer = document.querySelector(".spotlight > .product-card");
+createProductList(spotlightList, spotlightContainer);
+
+let spotlightPromoContainer = document.querySelector(".spotlight > .product-card");
+createOfferList(productPromo, spotlightPromoContainer);
+
+
+/* < !----------------------------------------------------------spotlight end----------------------------------------------------------> */
+
+
+
+/* < !----------------------------------------------------------health article start----------------------------------------------------------> */
+
+let healthArticleList = [
+    {
+        imgUrl: "https://blog-images.pharmeasy.in/2022/07/18132435/Blog-Image-18-july-01.jpg?dim=1024x0",
+        title: "What Is Syphilis? Read This Blog To Know More",
+    },
+    {
+        imgUrl: "https://blog-images.pharmeasy.in/2022/07/18143950/Blog-Image-18-july-02.jpg?dim=1024x0",
+        title: "All You Need To Know About Common Sexually Transmitted Diseases",
+    },
+    {
+        imgUrl: "https://blog-images.pharmeasy.in/2022/07/18013014/18.jpg?dim=1024x0",
+        title: "Best Home Remedies For Thick Eyebrows",
+    },
+    {
+        imgUrl: "https://blog-images.pharmeasy.in/2022/07/18011028/6.jpg",
+        title: "Natural Home Remedies To Reduce Belly Fat",
+    },
+    {
+        imgUrl: "https://blog-images.pharmeasy.in/2022/07/18005945/7.jpg",
+        title: "Best Home Remedies for Oily Scalp and Hair",
+    },
+    {
+        imgUrl: "https://blog-images.pharmeasy.in/2021/01/03163336/shutterstock_1678501243-1-768x512.jpg",
+        title: "Turmeric: Uses, Benefits, Side Effects, and More!",
+    },
+];
+
+
+
+let healthArticleContainer = document.querySelector(".health-articles > .article-container"); // Updated the selector
+createHealthArticlesList(healthArticleList, healthArticleContainer);
+
+function createHealthArticlesList(list, container) {
+    list.forEach(function (el) {
+        let div = document.createElement("div");
+        let img = document.createElement("img");
+        let title = document.createElement("p");
+
+        img.setAttribute("src", el.imgUrl);
+        title.innerText = el.title;
+
+        div.append(img, title);
+        container.append(div);
+    });
+}
+/* < !----------------------------------------------------------health article end----------------------------------------------------------> */
+
+
+
+/* < !----------------------------------------------------------WHY CHOOSE START----------------------------------------------------------> */
+/* < !----------------------------------------------------------WHY CHOOSE END----------------------------------------------------------> */
+
+
+
+/* < !----------------------------------------------------------customer review start----------------------------------------------------------> */
+/* < !----------------------------------------------------------customer review end----------------------------------------------------------> */
+
+
+
+/* < !---------------------------------------------------------app promo start----------------------------------------------------------> */
+/* < !---------------------------------------------------------app promo end----------------------------------------------------------> */
+
+
+
+/* < !-----------------------------------------------------------FAQ START----------------------------------------------------------> */
+/* < !-----------------------------------------------------------FAQ END----------------------------------------------------------> */
+
+
+
+/* < !-----------------------------------------------------------footer start----------------------------------------------------------> */
+/* < !-----------------------------------------------------------footer end----------------------------------------------------------> */
+
+
+
+/* < !----------------------------------------------------------floating button start----------------------------------------------------------> */
+/* < !----------------------------------------------------------floating button end----------------------------------------------------------> */

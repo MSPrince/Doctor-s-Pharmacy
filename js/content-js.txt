@@ -10,6 +10,7 @@ let bannerList = [
     },
 ];
 
+
 let newLaunchesList = [
     {
         name: "Kotex Overnight Period Panties - Medium / Large Size, Pack Of 2 Panties",
@@ -264,6 +265,12 @@ let featuredBrandList = [
         imgUrl: "https://cms-contents.pharmeasy.in/carousel_item/40facc7fa28-Pharmeasy-App.jpg?dim=1024x0",
     },
 ];
+
+
+
+
+
+
 let featuredBrandOfferList = [
     {
         imgUrl: "https://cdn01.pharmeasy.in/dam/banner/banner/a9ce64845df-TRENDING_DEALS.jpg?dim=1440x0",
@@ -290,6 +297,7 @@ let featuredBrandOfferList = [
         imgUrl: "https://cdn01.pharmeasy.in/dam/banner/banner/6e16a38ea89-ORTHO_PEDOC.jpg?dim=1024x0",
     },
 ];
+
 
 let dealsOfTheDayList = [
     {
@@ -334,8 +342,10 @@ let dealsOfTheDayList = [
         mrp: 245,
         discount: 15,
     },
-    
 ];
+
+
+
 
 let spotlightList = [
     {
@@ -400,6 +410,9 @@ let productPromo = [
         imgUrl: "https://cdn01.pharmeasy.in/dam/banner/banner/e65a05f443f-Livogen-SRPbanner.jpg?dim=1024x0",
     },
 ];
+
+
+
 
 let healthArticleList = [
     {
